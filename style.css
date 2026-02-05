@@ -5,9 +5,11 @@ main {
 
 .hide {
     pointer-events:none;
+    background-color: green;
+    opacity: 50%;
 }
 
 .allowed {
     pointer-events: all;
-
+    background-color: green;
 }

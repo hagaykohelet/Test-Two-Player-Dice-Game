@@ -1,8 +1,6 @@
 const maxScore = 100
 let player1TotalScore = 0
 let player2TotalScore = 0
-let shotPlayer1 = 0
-let shotPlayer2 = 0
 const rolling = document.getElementById("roll")
 const scorePlayer1 = document.getElementById("scorePlayer1")
 const totalScorePlayer1 = document.getElementById("totalScorePlayer1")
@@ -15,7 +13,7 @@ const players = {
     player2: false,
     shots2: 0
 }
-
+rolling.classList = "allowed"
 
 
 function choosePlayer() {
@@ -54,7 +52,9 @@ function runGame() {
             if (score === 0) {
                 holdButton.classList = "allowed"
             }
-
+            if(score!= 0){
+                holdButton.classList = "hide"
+            }
             player1TotalScore += score
             scorePlayer1.innerHTML = score
             players.shots1++
@@ -75,6 +75,9 @@ function runGame() {
             let score = rollDice()
             if (score === 0) {
                 holdButton.classList = "allowed"
+            }
+            if(score!= 0){
+                holdButton.classList = "hide"
             }
             player2TotalScore += score
             scorePlayer2.innerHTML = score
