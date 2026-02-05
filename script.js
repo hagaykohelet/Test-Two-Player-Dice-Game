@@ -52,7 +52,7 @@ function runGame() {
             if (score === 0) {
                 holdButton.classList = "allowed"
             }
-            if(score!= 0){
+            if (score != 0) {
                 holdButton.classList = "hide"
             }
             player1TotalScore += score
@@ -76,7 +76,7 @@ function runGame() {
             if (score === 0) {
                 holdButton.classList = "allowed"
             }
-            if(score!= 0){
+            if (score != 0) {
                 holdButton.classList = "hide"
             }
             player2TotalScore += score
