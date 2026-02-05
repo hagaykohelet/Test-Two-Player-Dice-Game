@@ -1,0 +1,13 @@
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hide {
+    pointer-events:none;
+}
+
+.allowed {
+    pointer-events: all;
+
+}
