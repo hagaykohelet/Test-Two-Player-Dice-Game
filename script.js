@@ -54,7 +54,7 @@ function runGame() {
             if (score === 0) {
                 holdButton.classList = "allowed"
             }
-            
+
             player1TotalScore += score
             scorePlayer1.innerHTML = score
             players.shots1++
@@ -65,14 +65,15 @@ function runGame() {
             holdButton.classList = "allowed"
             scorePlayer1.innerHTML = 0
         }
-        if (players.shots1 === 5 && player1TotalScore >= 100) {
+        if (player1TotalScore >= 100) {
+            totalScorePlayer1.innerHTML = player1TotalScore
             window.alert("player 1 win")
         }
     }
     else {
         if (players.shots2 < 5) {
             let score = rollDice()
-            if(score === 0 ) {
+            if (score === 0) {
                 holdButton.classList = "allowed"
             }
             player2TotalScore += score
@@ -85,9 +86,9 @@ function runGame() {
             holdButton.classList = "allowed"
             scorePlayer2.innerHTML = 0
         }
-        if (players.shots2 === 5 && player2TotalScore >= 100) {
-            
-             window.alert("player 2 win")
+        if (player2TotalScore >= 100) {
+            totalScoreplayer2.innerHTML = player2TotalScore
+            window.alert("player 2 win")
         }
     }
 
@@ -110,7 +111,7 @@ holdButton.addEventListener("click", () => {
         players.player1 = true
         players.player2 = false
         players.shots2 = 0
-        players.shots1 =0
+        players.shots1 = 0
     }
     holdButton.classList = "hide"
     rolling.classList = "allowed"
